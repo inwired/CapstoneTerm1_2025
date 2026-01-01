@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BambuVent | Team 10123</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green-dark: #2f4f1a;
+      --green-mid: #6fa33a;
+      --green-light: #eef6e5;
+      --accent: #9ad04b;
+      --text-dark: #1f2a14;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--green-light), #ffffff);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ---------- HERO ---------- */
+    header {
+      min-height: 100vh;
+      background: linear-gradient(rgba(47,79,26,0.85), rgba(47,79,26,0.85)),
+                  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      letter-spacing: 4px;
+      animation: fadeDown 1.2s ease;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      animation: fadeUp 1.2s ease;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 90px 10%;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      color: var(--green-dark);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 80px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 5px;
+    }
+
+    /* ---------- CARDS ---------- */
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    /* ---------- TEAM ---------- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 35px;
+    }
+
+    .member {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      transition: transform 0.4s ease;
+    }
+
+    .member:hover {
+      transform: scale(1.05);
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-mid), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--green-dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      section {
+        padding: 70px 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>BAMBUVENT</h1>
+    <p>Building a greener future • Team 10123 • 2025–2026</p>
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">The Climate Challenge</h2>
+  <div class="card">
+    <p>
+      Egypt faces rising temperatures, increasing CO₂ emissions, and expanding arid regions due to overpopulation and urban congestion. In Siwa Oasis, temperatures can exceed 43 °C while rainfall drops to only 2 mm annually.
+    </p>
+    <p>
+      This creates soil desertification, reduced vegetation, and severe heat absorption. Mechanical cooling systems are often too expensive or impractical for remote villages such as Aghurmi.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Our Solution – BambuVent</h2>
+  <div class="two-col">
+    <div class="card">
+      <h3>Vision</h3>
+      <p>
+        BambuVent is a climate‑resilient building prototype designed to restore indoor comfort in extreme desert climates without electricity.
+      </p>
+      <h3>Material Philosophy</h3>
+      <p>
+        Bamboo, palm fronds, and rice straw are used as sustainable, low‑cost materials with high thermal mass and strong structural properties.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Why It Works</h3>
+      <ul>
+        <li>75° inclined solar chimney for maximum heat absorption</li>
+        <li>Natural airflow driven by pressure and temperature differences</li>
+        <li>King post truss system for load distribution</li>
+        <li>Fire‑resistant and structurally stable under static and lateral loads</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Engineering & Performance</h2>
+  <div class="card">
+    <p>
+      The solar chimney heats internal air, reducing its density and creating buoyancy. This pulls cooler air from lower vents while expelling hot air from the top.
+    </p>
+    <p>
+      Calculations using stack pressure and Bernoulli’s equation showed a pressure difference of 0.00167 Pa and airflow velocity of 0.053 m/s, validating the passive cooling concept.
+    </p>
+    <p>
+      Stability analysis confirmed a safety factor of approximately 1.8, ensuring resistance against overturning.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Real‑Life Application</h2>
+  <div class="card">
+    <p>
+      Aghurmi Village in Siwa Oasis is the recommended implementation site. Integrating the solar chimney into traditional Kashif stone and mud‑mortar buildings improves thermal comfort while preserving cultural identity.
+    </p>
+    <p>
+      Vegetative shading, proper orientation, and metal surfaces inside the chimney can further enhance performance.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Meet the Team</h2>
+  <div class="team-grid">
+    <div class="member"><div class="avatar">A</div><strong>Abdelrahman Osama</strong></div>
+    <div class="member"><div class="avatar">A</div><strong>Ahmed Ramadan</strong></div>
+    <div class="member"><div class="avatar">E</div><strong>Essa Esmat</strong></div>
+    <div class="member"><div class="avatar">M</div><strong>Mohamed Magdy</strong></div>
+    <div class="member"><div class="avatar">O</div><strong>Omar Hany</strong></div>
+  </div>
+</section>
+
+<footer>
+  <p>STEM High School for Boys – 6th of October • Team 10123 • Egypt</p>
+</footer>
+
+</body>
+</html>
